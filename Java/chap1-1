@@ -123,3 +123,35 @@ public class Main {
 	    
   }
 }
+
+5. 정답
+
+import java.util.Scanner;
+
+public class Main {
+
+	public int getCount(String input1, char input2) {
+		int count = 0;
+
+		input1 = input1.toUpperCase();// 대문자로 무조건 통일
+		input2 = Character.toUpperCase(input2);
+		for (int i = 0; i < input1.length(); i++) {
+			if (input1.charAt(i) == input2) {// input1.charAt(i) 문자열의 각 문자와 비교
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+
+		Main m1 = new Main();
+
+		Scanner in = new Scanner(System.in);
+		String input1 = in.next();
+		in.nextLine();
+		char input2 = in.nextLine().charAt(0);
+		System.out.println(m1.getCount(input1, input2));
+
+	}
+}
