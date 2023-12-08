@@ -1,6 +1,6 @@
 문제 1-1
 
-1번째 시간 초과
+1번째 컴파일 에러가 계속 났는데 class이름을 Main으로 해야 함
 package chap01;
 
 import java.util.Scanner;
@@ -57,5 +57,41 @@ public class _01_FindChar {
   }
 }
 
-3번째
+3번째 시간 초과
 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class FindChar {
+	
+	public void getCount(String input1, char input2) {
+		int count = 0;
+	    for(int i = 0; i < input1.length(); i++) {
+	    	if(input1.charAt(i) == input2) {//input1.charAt(i) 문자열의 각 문자와 비교 
+	    		count++;
+	    	}
+	    }
+	    System.out.println(count);
+	}
+	
+  public static void main(String[] args){
+	  
+	  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	  
+    String input1 = null;
+    char input2 = 0;
+    
+	try {
+		input1 = br.readLine();
+		input2 = br.readLine().charAt(0);//charAt(0);붙이는걸 까먹었었다.
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+    
+	FindChar f1 = new FindChar();
+	f1.getCount(input1, input2);
+	
+  }
+}
