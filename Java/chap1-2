@@ -1,4 +1,6 @@
-내가 푼거
+1-2 대소문자 변환
+
+1. 정답
 import java.util.Scanner;
 
 public class Main {
@@ -25,4 +27,59 @@ public class Main {
 	}
 }
 
-풀이
+풀이1
+
+import java.util.Scanner;
+
+public class Main {
+	public String Change(String str) {
+		String answer = "";//변수 초기화를 빈 문자열로 변경
+		for(char x : str.toCharArray()){//string을 기반으로 문자 배열 생성
+			if(Character.isLowerCase(x)){//x가 소문자인가?
+				answer += Character.toUpperCase(x);
+			}else {
+				answer += Character.toLowerCase(x);
+			}
+			
+		}
+		return answer;
+	}
+
+
+	public static void main(String[] args) {
+		Main m1 = new Main();
+		
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		
+		System.out.println(m1.Change(str));
+	}
+}
+
+풀이2
+import java.util.Scanner;
+
+public class Main {
+	public String Change(String str) {
+		String answer = "";//변수 초기화를 빈 문자열로 변경
+		for(char x : str.toCharArray()){//string을 기반으로 문자 배열 생성
+			if(x >= 97 && x <= 122){
+				answer += (char)(x - 32);
+			}else {
+				answer += (char)(x + 32);
+			}
+			
+		}
+		return answer;
+	}
+
+
+	public static void main(String[] args) {
+		Main m1 = new Main();
+		
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		
+		System.out.println(m1.Change(str));
+	}
+}
