@@ -24,7 +24,7 @@ public class _01_FindChar {
   }
 }
 
-2번째 시간 초과
+2번째 오답(대문자 소문자 구분x)
 package chap01;
 
 import java.io.BufferedReader;
@@ -57,7 +57,7 @@ public class _01_FindChar {
   }
 }
 
-3번째 시간 초과
+3번째 오답(대문자 소문자 구분x)
 
 
 import java.io.BufferedReader;
@@ -96,7 +96,7 @@ public class FindChar {
   }
 }
 
-4. 시간 초과
+4. 오답(대문자 소문자 구분x)
 import java.util.Scanner;
 
 public class Main {
