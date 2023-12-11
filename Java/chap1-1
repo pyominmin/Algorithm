@@ -124,7 +124,7 @@ public class Main {
   }
 }
 
-5. 정답
+5. 풀이
 
 import java.util.Scanner;
 
