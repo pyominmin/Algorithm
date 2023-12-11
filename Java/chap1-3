@@ -31,3 +31,35 @@ public class Main {
 }
 
 풀이
+import java.util.Scanner;
+
+public class Main {
+	public static String longWord(String str) {
+		String answer = "";
+		int m = Integer.MIN_VALUE;// m을 최댓값으로 갱신하기 위해 처음 값을 가장작은 값으로 둔다.
+		String[] s = str.split(" ");
+		for(String x : s) {
+			int len = x.length();
+			if(len > m) {
+				m = len;
+				answer = x;
+			}
+		}
+		
+	return answer;
+		
+	}
+
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String a;
+		a = in.nextLine();
+		
+		Main m1 = new Main();
+		System.out.println(m1.longWord(a));
+	}
+}
+
+(indexOf(), substring())을 사용한 해설
+
