@@ -1,0 +1,33 @@
+1-3 문장 속 단어
+
+1. 정답
+
+import java.util.Scanner;
+
+public class Main {
+	public static String longWord(String str) {
+		String[] words = str.split("\\s+");//공백을 기준으로 문자열
+		String longest = "";
+		
+		for(String x : words) {
+			// 현재 단어가 저장된 가장 긴 단어보다 길면 갱신
+			if(x.length() > longest.length()) {
+				longest = x;
+			}
+			
+		}
+		return longest;	
+	}
+
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String a;
+		a = in.nextLine();
+		
+		Main m1 = new Main();
+		System.out.println(m1.longWord(a));
+	}
+}
+
+풀이
