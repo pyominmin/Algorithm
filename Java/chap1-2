@@ -1,1 +1,28 @@
+내가 푼거
+import java.util.Scanner;
 
+public class Main {
+	public static void Main(String str) {
+		char[] chars = str.toCharArray();// 문자열 길이 배열 생성
+
+		for (int i = 0; i < chars.length; i++) {//for문을 이용해 배열의 처음부터 끝까지 돈다.
+			char arr = chars[i];//chars의 문자를 arr에 저장
+
+			if (arr >= 'A' && arr <= 'Z') {
+				chars[i] += 32;
+			} else if (arr >= 'a' && arr <= 'z') {
+				chars[i] -= 32;
+			}
+		}
+		System.out.println(chars);
+	}
+
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		Main(str);
+	}
+}
+
+풀이
